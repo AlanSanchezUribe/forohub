@@ -47,13 +47,13 @@ public class User implements UserDetails {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
 
-    public void updateUser(UpdateUserData userUpdateData) {
-        if (userUpdateData.username() != null) {
-            this.username = userUpdateData.username();
+    public void updateUser(String username, String password) {
+        if (username != null) {
+            this.username = username;
         }
         
-        if (userUpdateData.password() != null) {
-            this.password = userUpdateData.password();
+        if (password != null) {
+            this.password = password;
         }
     }
 

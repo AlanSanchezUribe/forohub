@@ -1,5 +1,6 @@
 package com.desafio.foro.forohub.domain.message;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 import com.desafio.foro.forohub.domain.user.User;
@@ -31,7 +32,7 @@ public class Comment {
     private Long id;
     private String title;
     private String body;
-    private LocalDateTime createdAt;
+    private LocalDateTime created_at;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
@@ -43,7 +44,7 @@ public class Comment {
     public Comment(String title, String body, User user, String topic) {
         this.title = title;
         this.body = body;
-        this.createdAt = LocalDateTime.now();
+        this.created_at = LocalDateTime.now();
         this.user = user;
         this.topic = topic;
         this.status = true;

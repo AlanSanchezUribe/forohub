@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotBlank;
 
 public record CommentRegisterData(
     @NotNull
-    Long id,
+    Long userId,
     @NotBlank
     String title,
     @NotBlank

@@ -7,3 +7,6 @@ create table usuarios (
 
     primary key (id)
 );
+
+insert into `forohub`.usuarios (username, email, password) 
+values ('Alan', 'alan@gmail.com', '$2a$10$eUrl9p8hvlnzwXLA3xBEkO1cHjGHcI8Puqi.xVzYkru/FCdfGhi6e');
